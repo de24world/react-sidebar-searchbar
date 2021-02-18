@@ -1,0 +1,77 @@
+// global
+.Usercentrics__Wrapper {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999993;
+  overflow-y: hidden;
+}
+.Usercentrics {
+  padding: 1rem;
+  margin: 1rem 0 1rem 0;
+  position: absolute;
+  width: calc(100vw - 2rem);
+  overflow-y: scroll;
+  max-height: calc(100vh - 2rem);
+  max-width: 705px;
+  background-color: #fff;
+  border-radius: 9px;
+  box-shadow: 0 6px 36px rgba(0, 0, 0, 0.3);
+  overflow: auto;
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-content: center;
+  }
+  &__title {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    margin-right: auto;
+  }
+  &__toggleLabel {
+    flex-wrap: nowrap;
+    margin: 3px 8px 0 0;
+    color: grey;
+  }
+  &__category {
+    display: flex;
+    margin: 1rem 0;
+    &__label {
+      .IconButton {
+        display: inline-block;
+      }
+    }
+    &--left {
+      margin-right: 1rem;
+
+    }
+    &--right {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      &--top {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.5rem;
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
+
+.Usercentrics__category__label {
+}
+
+.Usercentrics__category__description {
+}
+
+
+// only Thirdlayout------------------
