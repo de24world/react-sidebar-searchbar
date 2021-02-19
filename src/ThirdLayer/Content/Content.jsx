@@ -1,8 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
+import "./Content.scss";
 
-const Content = (props) => {
-  return <div>Content</div>;
+const Content = () => {
+  return (
+    <div className="Content">
+      <p>Content, must call props ucdata later</p>
+    </div>
+  );
 };
 
 Content.propTypes = {};

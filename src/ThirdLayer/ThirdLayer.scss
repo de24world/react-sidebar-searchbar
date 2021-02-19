@@ -75,3 +75,26 @@
 
 
 // only Thirdlayout------------------
+.ThirdLayer {
+  // display: flex;
+
+  .__header {
+    background-color: greenyellow;
+    display: inline-flex;
+    width: 100%;
+
+    .--closeicon {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+  }
+
+  .__body {
+    display: flex;
+  }
+
+  .--saveButton {
+    width: 100%;
+  }
+}

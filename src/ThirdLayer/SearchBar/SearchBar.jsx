@@ -1,8 +1,13 @@
 import React from "react";
-import PropTypes from "prop-types";
+// import PropTypes from 'prop-types'
+import "./SearchBar.scss";
 
-const SearchBar = (props) => {
-  return <div>SearchBar</div>;
+const SearchBar = () => {
+  return (
+    <div className="SearchBar">
+      <div className="SearchBar__top">Searchbar, Field</div>
+    </div>
+  );
 };
 
 SearchBar.propTypes = {};

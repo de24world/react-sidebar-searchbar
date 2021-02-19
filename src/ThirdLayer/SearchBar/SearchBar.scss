@@ -1,0 +1,17 @@
+.SearchBar {
+  background-color: #333;
+  width: inherit;
+
+  &__top {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .__form {
+    width: 100%;
+  }
+
+  &.search {
+    margin-bottom: auto !important;
+  }
+}
