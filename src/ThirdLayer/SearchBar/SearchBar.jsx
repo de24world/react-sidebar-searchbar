@@ -1,11 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 // import PropTypes from 'prop-types'
 import "./SearchBar.scss";
 
 const SearchBar = () => {
+  const [search, setSearch] = useState("");
+
   return (
     <div className="SearchBar">
-      <div className="SearchBar__top">Searchbar, Field</div>
+      <div className="SearchBar__top">
+        Searchbar, Field
+        <input
+          type="text"
+          placeholder="Search Countries"
+          onChange={(e) => setSearch(e.target.value)}
+        />
+      </div>
     </div>
   );
 };
@@ -13,3 +22,7 @@ const SearchBar = () => {
 SearchBar.propTypes = {};
 
 export default SearchBar;
+
+// fliter & map with content component?
+// https://codesandbox.io/embed/react-hooks-search-filter-4gnwc
+// https://codesandbox.io/s/m4x9qx1z8?file=/src/SearchInput.js
