@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import PropTypes from "prop-types";
+import React, { useState, useRef } from "react";
+// import PropTypes from "prop-types";
 import "./ThirdLayer.scss";
 
 import SearchBar from "./SearchBar/SearchBar";
@@ -12,6 +12,18 @@ const ThirdLayer = () => {
     setSidebar(!isSidebar);
   };
 
+  const refAbout = useRef();
+
+  const scrollToAbout = (e) => {
+    e.preventDefault(
+      refAbout.current.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+        inline: "nearest"
+      })
+    );
+  };
+
   return (
     <div className="Usercentrics__Wrapper">
       <div className="Usercentrics">
@@ -22,8 +34,8 @@ const ThirdLayer = () => {
           </div>
 
           <div className="__body">
-            {isSidebar ? <SideBar /> : null}
-            <Content />
+            {isSidebar ? <SideBar scrollToAbout={scrollToAbout} /> : null}
+            <Content ref={refAbout} scrollToAbout={scrollToAbout} />
           </div>
 
           <div className="__footer">
