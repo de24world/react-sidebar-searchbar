@@ -35,7 +35,7 @@ const ThirdLayer = () => {
 
           <div className="__body">
             {isSidebar ? <SideBar scrollToAbout={scrollToAbout} /> : null}
-            <Content ref={refAbout} scrollToAbout={scrollToAbout} />
+            <Content ref={refAbout} />
           </div>
 
           <div className="__footer">
