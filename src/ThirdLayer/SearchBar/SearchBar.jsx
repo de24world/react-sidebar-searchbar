@@ -1,9 +1,14 @@
 import React, { useState } from "react";
 // import PropTypes from 'prop-types'
 import "./SearchBar.scss";
+// import Content from "../Content/Content";
 
 const SearchBar = () => {
   const [search, setSearch] = useState("");
+
+  const searchContent = (e) => {
+    setSearch(e.target.value);
+  };
 
   return (
     <div className="SearchBar">
@@ -12,7 +17,8 @@ const SearchBar = () => {
         <input
           type="text"
           placeholder="Search Countries"
-          onChange={(e) => setSearch(e.target.value)}
+          onChange={searchContent}
+          value={search}
         />
       </div>
     </div>
