@@ -1,14 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 // import PropTypes from 'prop-types'
 import "./SearchBar.scss";
 // import Content from "../Content/Content";
+import { ScrollContext } from "../../contexts/ScrollProvider";
 
 const SearchBar = () => {
+  const { test } = useContext(ScrollContext);
   const [search, setSearch] = useState("");
 
   const searchContent = (e) => {
     setSearch(e.target.value);
   };
+
+  console.log(test);
 
   return (
     <div className="SearchBar">
