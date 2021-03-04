@@ -13,6 +13,7 @@ const ThirdLayer = () => {
   };
 
   const refAbout = useRef();
+  // useRef 는 document.getelementbyID 와 같음
 
   const scrollToAbout = (e) => {
     e.preventDefault(
